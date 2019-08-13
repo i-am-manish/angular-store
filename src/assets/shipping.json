@@ -1,0 +1,18 @@
+[
+  {
+    "type": "Guaranteed one-day",
+    "price": 25.99
+  },
+  {
+    "type": "Overnight",
+    "price": 13.99
+  },
+  {
+    "type": "2-Day",
+    "price": 7.99
+  },
+  {
+    "type": "Postal",
+    "price": 0.00
+  }
+]

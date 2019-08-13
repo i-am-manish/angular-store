@@ -1,0 +1,25 @@
+<h2>Products</h2>
+<div *ngFor="let product of products; index as productId">
+  <h3>
+    <a [title]="product.name + ' details'"  [routerLink]="['/products', productId]">
+      {{ product.name }}
+    </a>
+  </h3>
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+  <button (click)="share()">
+    Share
+  </button>
+  <!-- The new product alert component takes a product as input from the product list. With that input, it shows or hides the "Notify Me" button, based on the price of the product. The Phone XL price is over $700, so the "Notify Me" button appears on that product.-->
+  <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()">
+  </app-product-alerts>
+</div>
+
+
+
+<!-- 
+the URL for a product with an id of 1 will be similar to https://getting-started-myfork.stackblitz.io/products/1.
+-->
